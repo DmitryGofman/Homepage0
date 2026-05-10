@@ -409,6 +409,32 @@ footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
   *{transition:none !important;animation:none !important}
   .reveal,.stagger > *{opacity:1;transform:none}
 }
+.hero-grid{grid-template-columns:auto 1fr auto}
+.hero-portrait{position:relative;width:clamp(220px,22vw,320px);aspect-ratio:4/5;border:1px solid var(--line-border);overflow:hidden;background:#141414}
+.hero-portrait img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.05)}
+.hero-portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,0) 55%,rgba(10,10,10,.55) 100%)}
+.hero-portrait::before,.hero-portrait .tick{content:"";position:absolute;width:14px;height:14px;border:1px solid var(--copper);z-index:2}
+.hero-portrait::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.hero-portrait .tick{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.hero-portrait .pstamp{position:absolute;left:.85rem;bottom:.7rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);z-index:3}
+@media (max-width:1100px){.hero-portrait{display:none}}
+.builder-gallery{display:grid;grid-template-columns:1fr;grid-template-rows:1.4fr 1fr;gap:.85rem;height:100%}
+.builder-gallery .gtop{position:relative;overflow:hidden;border:1px solid var(--line-border)}
+.builder-gallery .gbot{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.builder-gallery figure{position:relative;overflow:hidden;border:1px solid var(--line-border);margin:0}
+.builder-gallery img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.88) contrast(1.05);transition:transform 1.2s cubic-bezier(.25,1,.5,1)}
+.builder-gallery figure:hover img{transform:scale(1.06)}
+.builder-gallery figure::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,10,0) 50%,rgba(10,10,10,.55) 100%);pointer-events:none}
+.builder-gallery .stamp{position:absolute;left:.8rem;bottom:.7rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);z-index:2}
+@media (max-width:880px){.builder-gallery{grid-template-rows:auto auto}.builder-gallery .gtop{aspect-ratio:4/3}.builder-gallery .gbot figure{aspect-ratio:1}}
+.human-banner{position:relative;margin-bottom:2.5rem;overflow:hidden;border:1px solid var(--line-border);aspect-ratio:21/9}
+.human-banner img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.05)}
+.human-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.05) 0%,rgba(10,10,10,.55) 100%);pointer-events:none}
+.human-banner .stamp{position:absolute;left:1.2rem;bottom:1rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);z-index:2}
+.vision-image{margin-top:3rem;position:relative;overflow:hidden;border:1px solid var(--line-border);aspect-ratio:21/9}
+.vision-image img{width:100%;height:100%;object-fit:cover;display:block}
+.vision-image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,0) 40%,rgba(10,10,10,.65) 100%);pointer-events:none}
+.vision-image .stamp{position:absolute;left:1.2rem;bottom:1rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);z-index:2}
 </style>
 </head>
 <body>
@@ -489,6 +515,11 @@ footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
           <span>Index — 06 sections</span>
         </div>
       </div>
+      <aside class="hero-portrait reveal" data-testid="hero-portrait">
+        <img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/dv5mgyjg_DVM%20%2862%29_Original.jpeg" alt="Dmitry Gofman" loading="lazy" />
+        <span class="tick" aria-hidden="true"></span>
+        <span class="pstamp">DG · 32.0853°N</span>
+      </aside>
     </div>
   </div>
 </section>
@@ -624,10 +655,13 @@ footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
           <span class="tag">Craft</span>
         </div>
       </div>
-      <figure class="builder-image reveal" aria-hidden="false">
-        <img src="https://static.prod-images.emergentagent.com/jobs/7c97a11b-06a0-41fa-8242-d29d162a46a9/images/d495c926409dbfe3bab6bd73d0bce59aef1a1a7f5feed335d8c14862bf03c376.png" alt="Warm workshop atmosphere with tools and copper light" loading="lazy" />
-        <figcaption class="stamp">Workshop · 2025</figcaption>
-      </figure>
+      <div class="builder-gallery reveal" data-testid="builder-gallery">
+        <figure class="gtop"><img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/3884fvpf_1208b7e5-5a0f-478f-a6a0-1d5b48715871_Original.jpeg" alt="At the forge" loading="lazy" /><figcaption class="stamp">Forge · iron &amp; fire</figcaption></figure>
+        <div class="gbot">
+          <figure><img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/q3qq1b4d_f1074b95-3e5a-4dec-b24a-d47c7c2a4e0f.jpeg" alt="At the pottery wheel" loading="lazy" /><figcaption class="stamp">Wheel · clay</figcaption></figure>
+          <figure><img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/2iu4mrf8_BD0020A8-885B-4600-91C1-38B11DF8D280.png" alt="Builder studio" loading="lazy" /><figcaption class="stamp">Studio · systems</figcaption></figure>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -646,6 +680,10 @@ footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
       </div>
     </div>
 
+    <figure class="human-banner reveal" data-testid="human-banner">
+      <img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/cyckm4dm_IMG_9647_Original.png" alt="Balance — handstand on stacked stones at dawn" loading="lazy" />
+      <figcaption class="stamp">Balance · attention · alignment</figcaption>
+    </figure>
     <div class="human reveal">
       <div>
         <p>I care about the people inside the system: teammates, users, builders, operators, and the culture around the work.</p>
@@ -694,6 +732,10 @@ footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
         <div class="vision-item"><span class="num">06</span><span class="label">Human growth</span><span class="arrow">→</span></div>
       </div>
     </div>
+    <figure class="vision-image reveal" data-testid="vision-image">
+      <img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/2iu4mrf8_BD0020A8-885B-4600-91C1-38B11DF8D280.png" alt="The builder's studio — workshop, hardware, craft, and ocean horizon" loading="lazy" />
+      <figcaption class="stamp">Studio · workshop · horizon</figcaption>
+    </figure>
   </div>
 </section>
 
