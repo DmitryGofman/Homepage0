@@ -45,8 +45,10 @@ em{font-style:italic;color:var(--sand)}
 .nav.scrolled{background:rgba(10,10,10,.78);border-bottom-color:var(--line-border)}
 .nav-inner{width:var(--container);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
 .brand{display:flex;align-items:center;gap:.65rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text)}
-.brand-mark{width:26px;height:26px;border:1px solid var(--copper);position:relative;display:inline-block;transform:rotate(45deg)}
-.brand-mark::after{content:"";position:absolute;inset:6px;border:1px solid var(--copper);opacity:.55}
+.brand-mark{width:34px;height:34px;border-radius:50%;border:1px solid var(--copper);padding:2px;position:relative;display:inline-block;overflow:visible;background:#0A0A0A;flex-shrink:0}
+.brand-mark img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;filter:saturate(.95) contrast(1.05)}
+.brand-mark::after{content:"";position:absolute;inset:-4px;border:1px solid rgba(184,115,51,.35);border-radius:50%;pointer-events:none}
+@media (max-width:520px){.brand-mark{width:30px;height:30px;padding:2px}.brand-name{font-size:.7rem}}
 .brand-name{font-weight:500}
 .brand-name span{color:var(--copper)}
 .nav-links{display:flex;gap:2rem;align-items:center}
@@ -220,7 +222,7 @@ footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
 <nav class="nav" data-testid="main-nav" aria-label="Primary">
   <div class="nav-inner">
     <a href="#home" class="brand" data-testid="nav-brand" aria-label="Dmitry Gofman home">
-      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-mark" data-testid="brand-avatar" aria-hidden="true"><img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/dv5mgyjg_DVM%20%2862%29_Original.jpeg" alt="" /></span>
       <span class="brand-name">Dmitry <span>Gofman</span></span>
     </a>
     <button class="nav-toggle" data-testid="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
@@ -403,7 +405,7 @@ footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
         <figure class="gtop"><img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/3884fvpf_1208b7e5-5a0f-478f-a6a0-1d5b48715871_Original.jpeg" alt="At the forge" loading="lazy" /><figcaption class="stamp">Forge · iron &amp; fire</figcaption></figure>
         <div class="gbot">
           <figure><img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/q3qq1b4d_f1074b95-3e5a-4dec-b24a-d47c7c2a4e0f.jpeg" alt="At the pottery wheel" loading="lazy" /><figcaption class="stamp">Wheel · clay</figcaption></figure>
-          <figure><img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/2iu4mrf8_BD0020A8-885B-4600-91C1-38B11DF8D280.png" alt="Builder studio" loading="lazy" /><figcaption class="stamp">Studio · systems</figcaption></figure>
+          <figure><img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/0qjzukey_CB37A0A1-94A5-4F4D-8ECF-AD4AB4D853B1.png" alt="Tinkering with mechanical parts at the bench" loading="lazy" /><figcaption class="stamp">Bench · tinker</figcaption></figure>
         </div>
       </div>
     </div>
@@ -420,7 +422,7 @@ footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
       </div>
     </div>
     <figure class="human-banner reveal" data-testid="human-banner">
-      <img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/cyckm4dm_IMG_9647_Original.png" alt="Balance — handstand on stacked stones at dawn" loading="lazy" />
+      <img src="https://customer-assets.emergentagent.com/job_dima-builder/artifacts/mbkteis5_IMG_9647_Original.jpeg" alt="Balance — handstand on stacked stones at dawn" loading="lazy" />
       <figcaption class="stamp">Balance · attention · alignment</figcaption>
     </figure>
     <div class="human reveal">
