@@ -1,0 +1,171 @@
+{
+  "project_info": {
+    "name": "Dmitry Gofman Personal Brand Page",
+    "type": "Single Static HTML/CSS/JS",
+    "theme": "Dark",
+    "archetype": "Engineering Craft (Custom mix of High-Contrast and Organic/Earthy)"
+  },
+  "color_tokens": {
+    "background": {
+      "main": "#0A0A0A",
+      "surface": "#141414",
+      "surface_hover": "#1C1C1C",
+      "blueprint_bg": "#0D0F12"
+    },
+    "text": {
+      "primary": "#F4F4F0",
+      "secondary": "#A3A3A3",
+      "muted": "#737373"
+    },
+    "accents": {
+      "copper": "#B87333",
+      "clay": "#A47551",
+      "warm_sand": "#D6B89E",
+      "muted_olive": "#5B6651"
+    },
+    "lines": {
+      "grid": "rgba(91, 102, 81, 0.15)",
+      "border": "rgba(244, 244, 240, 0.1)",
+      "cad_faint": "rgba(184, 115, 51, 0.2)"
+    }
+  },
+  "typography_scale": {
+    "fonts": {
+      "headings": "'Fraunces', serif",
+      "accents": "'JetBrains Mono', monospace",
+      "body": "'Inter', sans-serif"
+    },
+    "sizes": {
+      "h1": "clamp(3rem, 8vw, 6rem)",
+      "h2": "clamp(2rem, 5vw, 4rem)",
+      "h3": "clamp(1.5rem, 3vw, 2rem)",
+      "h4": "clamp(1.25rem, 2vw, 1.5rem)",
+      "body": "1rem",
+      "label": "0.875rem"
+    },
+    "weights": {
+      "headings": 300,
+      "accents": 400,
+      "body": 300
+    },
+    "spacing": {
+      "headings": "-0.02em",
+      "accents": "0.1em",
+      "body": "normal"
+    }
+  },
+  "layout_and_spacing": {
+    "section_padding": "clamp(4rem, 10vw, 8rem) 0",
+    "container_width": "min(90%, 1200px)",
+    "grid_gap": "2rem",
+    "card_padding": "2rem"
+  },
+  "decorative_system": {
+    "blueprint_grid": "SVG background pattern repeating with 1px stroke of #5B6651 at 0.15 opacity. Use larger grid squares (e.g., 50px or 100px).",
+    "corner_ticks": "Absolute positioned inline SVGs at the corners of sections/cards acting like registration marks. 10px lines, 1px thick, colored #B87333.",
+    "cad_geometry": "Faint geometric circles and intersecting lines behind hero and worldview sections."
+  },
+  "motion_specs": {
+    "scroll": "Smooth scrolling via CSS behavior: smooth.",
+    "entrance": "Sections translate Y by 30px and fade in from opacity 0 to 1 using IntersectionObserver. Transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1).",
+    "hover": "Cards shift up -5px, border color transitions to clay/copper, background slightly lightens. Transition: all 0.3s ease.",
+    "cursor": "Optional subtle custom cursor for interactive elements."
+  },
+  "copy_mapping": {
+    "hero": {
+      "headline": "ENGINEER. BUILDER. SEEKER.",
+      "subheadline": "I'm Dmitry Gofman - a multidisciplinary engineer and hands-on builder exploring the space between physical systems, technology, craft, and human potential.",
+      "cta_primary": "Explore my world",
+      "cta_secondary": "Connect with me"
+    },
+    "worldview": {
+      "eyebrow": "01 // WORLDVIEW",
+      "title": "A Philosophy of Building",
+      "content": "Philosophical narrative section exploring the intersection of engineering discipline and craft warmth."
+    },
+    "engineering": {
+      "eyebrow": "02 // ENGINEERING",
+      "title": "Technical Capabilities",
+      "cards": [
+        {
+          "title": "Multidisciplinary R&D",
+          "desc": "Navigating ambiguity to build first-of-kind systems."
+        },
+        {
+          "title": "Electromechanical Systems",
+          "desc": "Bridging the gap between software and the physical world."
+        },
+        {
+          "title": "Manufacturing Reality",
+          "desc": "Scaling concepts into tangible, producible hardware."
+        },
+        {
+          "title": "Team & System Integration",
+          "desc": "Aligning people and technology to achieve complex goals."
+        }
+      ]
+    },
+    "builders_path": {
+      "eyebrow": "03 // BUILDER'S PATH",
+      "title": "The Workshop & Craft",
+      "content": "Narrative detailing the journey through hands-on making, hardware, and physical creation."
+    },
+    "human_dimension": {
+      "eyebrow": "04 // HUMAN DIMENSION",
+      "title": "People, Teams, Culture",
+      "content": "Focusing on the human operating system, collaboration, and personal development."
+    },
+    "vision": {
+      "eyebrow": "05 // VISION",
+      "title": "Future Studio",
+      "content": "Exploring future ventures, studios, and the next horizon of multi-disciplinary work."
+    },
+    "contact": {
+      "eyebrow": "06 // CONNECT",
+      "title": "Start a Conversation",
+      "email": "dimagofman22@gmail.com",
+      "github": "https://github.com/dmitrygofman"
+    }
+  },
+  "asset_list": {
+    "icons": [
+      { "name": "compass", "section": "Worldview", "source": "Lucide" },
+      { "name": "cpu", "section": "Engineering", "source": "Lucide" },
+      { "name": "cog", "section": "Engineering", "source": "Lucide" },
+      { "name": "layers", "section": "Engineering", "source": "Lucide" },
+      { "name": "users", "section": "Engineering", "source": "Lucide" },
+      { "name": "hammer", "section": "Builder's Path", "source": "Lucide" },
+      { "name": "heart", "section": "Human Dimension", "source": "Lucide" },
+      { "name": "eye", "section": "Vision", "source": "Lucide" },
+      { "name": "mail", "section": "Contact", "source": "Lucide" },
+      { "name": "github", "section": "Contact", "source": "Lucide" }
+    ],
+    "images": [
+      {
+        "role": "hero_background_texture",
+        "url": "https://static.prod-images.emergentagent.com/jobs/7c97a11b-06a0-41fa-8242-d29d162a46a9/images/c6fb037535b02dcbcfbcf945c1d377beca2ab31eb9ba759f62394cda365ea097.png",
+        "alt": "Close up of precision copper and machined steel mechanical parts",
+        "suggestion": "Use with heavy dark gradient overlay (e.g., linear-gradient to bottom from #0A0A0A to transparent) to keep text readable."
+      },
+      {
+        "role": "worldview_geometry",
+        "url": "https://static.prod-images.emergentagent.com/jobs/7c97a11b-06a0-41fa-8242-d29d162a46a9/images/652ff94b0e1cb832a36deb8e731069abef587071066dbb68e561d7652e336741.png",
+        "alt": "Abstract dark technical blueprint geometry",
+        "suggestion": "Use as a parallax background or section divider, low opacity."
+      },
+      {
+        "role": "builders_path_imagery",
+        "url": "https://static.prod-images.emergentagent.com/jobs/7c97a11b-06a0-41fa-8242-d29d162a46a9/images/d495c926409dbfe3bab6bd73d0bce59aef1a1a7f5feed335d8c14862bf03c376.png",
+        "alt": "Warm craft workshop at night, dark ambiance with glowing copper lighting",
+        "suggestion": "Display as a standalone image or side-by-side with text to evoke the workshop feeling."
+      },
+      {
+        "role": "engineering_hardware_detail",
+        "url": "https://images.pexels.com/photos/3912367/pexels-photo-3912367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "alt": "Close-up of a microprocessor and circuit board placed on technical design sketches",
+        "suggestion": "Use for the Engineering section background or visual accent."
+      }
+    ]
+  },
+  "instructions_to_main_agent": "1. Produce ONLY raw HTML, CSS, and JS (no React, no Tailwind). Ensure all CSS and JS is embedded or strictly separated without a build step. 2. Implement a responsive grid layout. 3. Recreate the blueprint background using an embedded SVG pattern in the CSS background-image. 4. Use Google Fonts for typography. 5. Implement IntersectionObserver in JS for the scroll-triggered fade-ins. 6. Use Lucide icons via CDN script (https://unpkg.com/lucide@latest). 7. Add subtle registration marks via CSS ::before/::after pseudoelements for the 'engineering' aesthetic. 8. Add `data-testid` to all interactive and key elements. 9. Keep HTML semantics clean and accessible."
+}
