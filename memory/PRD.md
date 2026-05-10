@@ -30,6 +30,7 @@ Rebuild personal homepage at https://dmitrygofman.github.io/homepage as a profes
 - Static deliverable at `/app/site/index.html` ready to push to GitHub Pages.
 - Preview rendering verified at https://dima-builder.preview.emergentagent.com.
 - README with two deployment options (main branch root / gh-pages branch).
+- **5 user-supplied photos integrated**: portrait card in hero (DVM 62), 3-image gallery in Builder's Path (forge / pottery wheel / studio render), wide handstand banner in Human Dimension, wide studio render in Vision.
 
 ## Backlog (P0/P1/P2)
 - **P1**: Add Dmitry's portrait once user provides image (slot in hero or Builder's Path).
